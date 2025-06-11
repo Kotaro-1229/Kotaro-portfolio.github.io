@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/*共通部分
+---------------------------*/
+html {
+    font-size: 100%;  
+    scroll-behavior: smooth;
+}
+body{
+    line-height: 1.7;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+.page-title{
+    font-family:"Jacques Francois";
+    font-size: 1.6rem;
+    margin: 2rem auto 0;
+    text-align: center;
+}
+.text{
+    font-family:"Noto Sans JP";
+    font-size:.6rem
+}
+.center-align{
+    text-align: center;
+}
+.left-align{
+    text-align: left;
+}
+.works-bottom a,
+.bottom{
+    text-decoration: none;
+    font-weight: bold;
+}
+/*ヘッダー部分
+---------------------------*/
+.header-nav{
+    margin: 1rem 1rem 2.5rem;
+}
+.header-nav li a:hover{
+    color:#00CFCF;
+}
+.header-nav ul{
+    display: flex;
+    justify-content:space-between;
+    list-style: none;  
+}
+.header-nav li a {
+    font-family:"Julius Sans One";
+    font-size: 1.25rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*HERO画面
+---------------------------*/
+.hero{
+     background-image:url(DSC00522.jpg);
+     background-size: cover;
+     background-position: center;
+     aspect-ratio: 392 / 237;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
+.hero-pagetitle{
+    background-color: rgba(255,255,255,0.4);
+    width: 303px;
+    padding: 1rem 2.5rem;
+    border-style: solid;
+    border-width: 0.3px;
+    border-radius: 25px;
+}
+/*ABOUT画面
+---------------------------*/
+.text{
+    margin: 1rem 0rem;
+}
+.main{
+    text-align: center;
+    max-width: fit-content;
+    margin: 0 3rem;
+}
+/*フッター画面
+---------------------------*/
+.footer-solid{
+    width: 90%;
+    padding-top:2rem;
+    border-top-style: solid;
+    border-width: .7px;
+}
+.footer{
+    margin:0 1.5rem 2rem;
+}
+.sns-icon{
+    display: flex;
+    font-size: 1.5rem;
+    gap:1.5rem;
+}
+.sns-icon i{
+    color: #000;
+}
+.sns-icon i:active,
+.sns-icon i:hover{
+    color: #00CFCF;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+.footer-bottom{
+    color:#fff;
+    background-color: #00CFCF;
+    padding: 0.7rem 1.4rem;
+    border-radius: 5px;
+    box-shadow: 0 3px #3b8a98;
+    position: relative;
+    top: -2px;
+}
+.footer-bottom:hover{
+    box-shadow: 0 1px #3b8a98;
+    top: 1px;
+}
+.footer-bottom-margin{
+    margin: 2rem 
+}
+.footer img{
+    box-shadow: 3px 4px 6px rgba(255, 255, 255, 255.40);
+}
+/*Works画面
+---------------------------*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+}
+.works-img{
+    aspect-ratio: 341/229;
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+}
+.works-card{
+    margin: 2rem 1rem 0;
+    background-color:#F2F4F7;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 4px 10px 4px rgba(255, 255, 255, 255.25);
+}
+.works-card h3 {
+  margin: 8px auto;
+}
+.works-bottom{
+    background-color:#fff;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: #00CFCF;
+    margin: 16px auto;
+    width: 160px;
+}
+.works-bottom a{
+    color: #00CFCF;
+    display: block;
+    padding: 8px 32px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.works-bottom a:hover,
+.works-bottom a:active{
+    color: #fff;
+    background-color: #00CFCF;
+    border-radius: 25px;
+}
+.works-cord p{
+    width: 60%;
+    margin: 8px auto;
+}
+.skills{
+    text-align: left;
+    margin: 8px 14px;
+}
+/*デスクトップ版
+---------------------------*/
+@media screen and (min-width: 800px){
+html {
+  font-size: 180%;
+}
+.header-nav{
+    margin: 1rem 5rem;
+}
+
+.hero h2{
+    width: 80%;
+}
+.main{
+    text-align: center;
+    margin: 2.5rem auto;
+}
+/*フッター*/
+.footer{
+    margin: 0 10rem 2rem;
+
+}
+.footer p {
+    font-size: 1rem;
+}
+.footer .container {
+    margin: 0.5rem auto;
+}
+.footer-photo {
+    width: 300px;
+  object-fit: cover;
+  display: block;
+}
+.sns-icon{
+    margin-left: 5rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.works-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 1rem;
+}
+.works-card p,
+.works-card h3,
+.works-img {
+  margin-bottom: 1rem; /* 適度に余白を取る */
+}
+
+.works-bottom {
+  margin-top: auto; /* 下に押し込む */
+}
+.works-img {
+  width: 100%;
+  aspect-ratio: 341 /229; /* これで比率キープ */
+  object-fit: cover;
+  height: auto; /* または height: unset; */
+}
+
+/* 1. works-card を縦並びにして中身を押し下げる構造にする */
+.works-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 500px; /* カード高さ統一（調整可） */
+  padding: 1rem;
+  background-color: #F2F4F7;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 4px 10px 4px rgba(0, 0, 0, 0.05);
+}
+/* 2. skillsを下に押し出す起点にする */
+.text.skills {
+  margin-top: auto;  /* ← 最後の .skills を一番下に配置 */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+/* 3. works-bottom（ボタン）を最下部に固定的に配置 */
+.works-bottom {
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+/* 4. オプション：画像調整も安定化（必要なら） */
+.works-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.works-explanation {
+  min-height: 200px; /* 説明文ブロックの高さを揃える */
+  margin-bottom: 0;
+}
+.works-card {
+  margin: 1rem 1rem 0;
+  min-height: unset;
+  height: auto;
+}
+.grid {
+  gap: 0.5rem;
+}
+.works-explanation {
+  height: 200px; /* or min-height */
+}
+.works-bottom {
+  margin-bottom: 0 !important;
+}
+
+.works-bottom a {
+  padding: 4px 24px;
+}
+}
