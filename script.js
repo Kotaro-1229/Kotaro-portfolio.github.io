@@ -34,3 +34,27 @@ const showP = (entries, observer) => {
 };
 const pObserver = new IntersectionObserver(showP);
 pObserver.observe(document.querySelector('#animateP'));
+/*問い合わせフォーム
+================================*/
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // デフォルトの送信を止める
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = 'thanks.html'; // ← 成功したらリダイレクト
+      } else {
+        alert('送信に失敗しました。ページを更新して再度お試しください。');
+      }
+    }).catch(error => {
+      alert('エラーが発生しました。');
+    });
+  });

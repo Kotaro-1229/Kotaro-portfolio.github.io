@@ -34,27 +34,23 @@
         <section>     
             <h2 class="page-title">お問い合わせフォーム</h2>
             <div class="contact">
-                <form action="https://formsubmit.co/kotaroweb1229@gmail.com" method="POST">
-
-                
+                <form id="contactForm" action="https://formsubmit.co/kotaroweb1229@gmail.com" method="POST">
                 <input type="hidden" name="_next" value="https://kotaro-hayshi.github.io/thanks.html">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
 
+                <label for="name">お名前：</label><br>
+                <input type="text" id="name" name="name" required><br><br>
 
-                    <!-- スパム対策 -->
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_captcha" value="false">
+                <label for="email">メールアドレス：</label><br>
+                <input type="email" id="email" name="email" required><br><br>
 
-                    <label for="name" >お名前：</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
+                <label for="message">お問い合わせ内容：</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-                    <label for="email">メールアドレス：</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-
-                    <label for="message">お問い合わせ内容：</label><br>
-                    <textarea id="message" name="message" rows="5" required></textarea><br><br>
-                    <div class="center-align">
-                        <button class="bottom footer-bottom" type="submit">送信する</button>
-                    </div>
+                <div class="center-align">
+                    <button class="bottom footer-bottom" type="submit">送信する</button>
+                </div>
                 </form>
             </div>
         </section>
