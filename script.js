@@ -37,24 +37,24 @@ pObserver.observe(document.querySelector('#animateP'));
 /*問い合わせフォーム
 ================================*/
   const form = document.getElementById('contactForm');
+
   form.addEventListener('submit', function (e) {
-    e.preventDefault(); // デフォルトの送信を止める
+    e.preventDefault();
 
     const formData = new FormData(form);
-
     fetch(form.action, {
       method: 'POST',
       body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
+      headers: { 'Accept': 'application/json' }
     }).then(response => {
       if (response.ok) {
-        window.location.href = 'thanks.html'; // ← 成功したらリダイレクト
+        // JSで手動でリダイレクト
+        window.location.href = 'thanks.html';
       } else {
-        alert('送信に失敗しました。ページを更新して再度お試しください。');
+        alert('送信に失敗しました。');
       }
-    }).catch(error => {
-      alert('エラーが発生しました。');
-    });
+    }).catch(() => alert('エラーが発生しました。'));
   });
+
+/*ワークスカードに0.3秒のアニメーション追加
+===========================================*/
