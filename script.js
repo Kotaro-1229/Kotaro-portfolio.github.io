@@ -36,25 +36,34 @@ const pObserver = new IntersectionObserver(showP);
 pObserver.observe(document.querySelector('#animateP'));
 /*問い合わせフォーム
 ================================*/
+document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // デフォルトの送信を止める
 
-    const formData = new FormData(form);
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        // JSで手動でリダイレクト
-        window.location.href = 'thanks.html';
-      } else {
-        alert('送信に失敗しました。');
-      }
-    }).catch(() => alert('エラーが発生しました。'));
-  });
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          window.location.href = 'thanks.html'; // ここで手動リダイレクト
+        } else {
+          alert('送信に失敗しました。');
+        }
+      }).catch(() => {
+        alert('エラーが発生しました。');
+      });
+    });
+  }
+});
+
 
 /*ワークスカードに0.3秒のアニメーション追加
 ===========================================*/
