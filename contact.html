@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact page</title>
+        <meta name="description" content="航太朗のポートフォリオサイトです。現在ココナラでお仕事を受け付けています。Web制作のご依頼はお気軽にお問い合わせください。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--リセットCSS-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <!--Googlefonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacques+Francois&family=Julius+Sans+One&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!--font-awsome-->
+    <script src="https://kit.fontawesome.com/65a8d538b4.js" crossorigin="anonymous"></script>
+
+        <!--オリジナルCSS-->
+    <link rel="stylesheet" href="Kotaro-portfolio.css">
+    <script src="script.js"></script>
+    </head>
+    <body>
+        <aside class="header">
+            <h1 class="page-title">Kotaro-Portfolio</h1>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">TOP</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </aside>
+            <!--コンタクトフォーム-->     
+        <section>     
+            <h2 class="page-title">お問い合わせフォーム</h2>
+            <div class="contact">
+                <form action="https://formsubmit.co/kotaroweb1229@gmail.com" method="POST">
+
+                    <input type="hidden" name="_next" value="thanks.html">
+
+                    <!-- スパム対策 -->
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <label for="name" >お名前：</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">メールアドレス：</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="message">お問い合わせ内容：</label><br>
+                    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                    <div class="center-align">
+                        <button class="bottom footer-bottom" type="submit">送信する</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer class="footer">
+            <h2 class="page-title footer-solid">-CONTACT-</h2>
+            <div class="container">
+                <div>                           <!--左側-->
+                    <p class="text left-align">
+                    mail. kotaroweb1229@gmail.com
+                    </p>
+                    <div class="sns-icon">
+                        <a href="https://github.com/Kotaro-Hayshi"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/kotaroweb_design/"><i class="fa-brands fa-instagram"></i></a>       
+                    </div>
+                </div>
+                <div class="footer-photo">      <!--右側-->
+                    <img class="footer-photo" src="footer-photo.png" alt="footer-photo"></a>
+                </div>
+            </div>   
+            <div class="center-align">
+            <a class="footer-bottom bottom"href="contact.html">Contact</a>  
+            </div>   
+        </footer>
+    </body>
+</html>

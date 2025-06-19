@@ -16,8 +16,12 @@
 
         <!--オリジナルCSS-->
     <link rel="stylesheet" href="Kotaro-portfolio.css">
+    <script src="script.js" defer></script>
     </head>
     <body>
+        <div id="loading">
+            <div class="loader">Loading...</div>
+        </div>
         <aside class="header">
             <h1 class="page-title">Kotaro-Portfolio</h1>
             <nav class="header-nav">
@@ -25,16 +29,16 @@
                     <li><a href="index.html">TOP</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="works.html">WORKS</a></li>
-                    <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScOqfYEFWckBWJtyZot_07-4ytgZk0OoOo0xYHduAYMANZdwA/viewform?usp=header">CONTACT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
                 </ul>
             </nav>
         </aside>    
-        <section class="hero">
+        <section class="hero"> <!--アニメーション導入-->
             <h2 class="page-title hero-pagetitle">Kotaro Hayashi<br>Portfolio </h2>
         </section>
         <main class="main" id="about">
             <h2 class="page-title">-ABOUT-</h2>
-            <p class="left-align text">こんにちは。航太朗と申します。<br>現在、大学で経済を学びながら、
+            <p class="left-align text" id="animateP">こんにちは。航太朗と申します。<br>現在、大学で経済を学びながら、
             独学でWeb制作を学んでいます。来春からIT企業に就職予定です。<br> 就職前に実践的なスキルを身につけたいと思い、独学でWeb制作を始めました。<br>
             趣味はピアノ、フットサル、美術館巡りなど、アクティブに活動することが好きです。<br>
             UI/UXを考え、見る人に心地よいサイト作りを心がけています。<br>
@@ -58,7 +62,7 @@
                 </div>
             </div>   
             <div class="center-align">
-            <a class="footer-bottom bottom"href="https://docs.google.com/forms/d/e/1FAIpQLScOqfYEFWckBWJtyZot_07-4ytgZk0OoOo0xYHduAYMANZdwA/viewform?usp=header">Contact</a>  
+            <a class="footer-bottom bottom"href="contact.html">Contact</a>  
             </div>   
         </footer>
     </body>
