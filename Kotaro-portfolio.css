@@ -29,8 +29,7 @@ body{
 .left-align{
     text-align: left;
 }
-.works-bottom a,
-.bottom{
+.works-bottom a{
     text-decoration: none;
     font-weight: bold;
 }
@@ -182,20 +181,15 @@ body{
     margin: 0 3rem;
 }
 /*フッター画面
----------------------------*/
-.footer-solid{
-    width: 90%;
-    padding-top:2rem;
-    border-top-style: solid;
-    border-width: .7px;
-}
+--------------------------*/
 .footer{
-    margin:0 1.5rem 2rem;
+    margin:1rem auto 2rem;
 }
 .sns-icon{
     display: flex;
     font-size: 1.5rem;
-    gap:1.5rem;
+    gap:1rem;
+    justify-content: center;
 }
 .sns-icon i{
     color: #000;
@@ -204,30 +198,40 @@ body{
 .sns-icon i:hover{
     color: #00CFCF;
 }
-.container{
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem auto;
+.sns-icon a{
+  margin: 0 auto;
+  align-items: center; 
 }
-.footer-bottom{
-    color:#fff;
-    background-color: #00CFCF;
+.common-button {
+    appearance: none; /* ← これ必須（ブラウザのボタンデザイン除去） */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: #00CFCF;
+    color: #fff;
     padding: 0.7rem 1.4rem;
     border-radius: 5px;
     box-shadow: 0 3px #3b8a98;
+    cursor: pointer;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 1; 
     position: relative;
     top: -2px;
+    transition: all 0.3s ease;
 }
-.footer-bottom:hover{
+
+.common-button:hover {
     box-shadow: 0 1px #3b8a98;
     top: 1px;
 }
-.footer-bottom-margin{
-    margin: 2rem 
-}
-.footer img{
-    box-shadow: 3px 4px 6px rgba(255, 255, 255, 255.40);
-}
+.submit-button-fix{
+    position: relative;
+    }
+
 /*Works画面
 ---------------------------*/
 .grid{
@@ -293,6 +297,11 @@ body{
   background-color: #F2F4F7;
   width: 90%;
 }
+/* submitボタンだけに適用する専用クラスを作る(contact.html) */
+.submit-button-fix {
+    position: relative;
+    left: -15px; /* ここを見た目に合わせて微調整 */
+}
 /*デスクトップ版
 ---------------------------*/
 @media screen and (min-width: 800px){
@@ -317,21 +326,20 @@ html {
 }
 .footer p {
     font-size: 1rem;
+    margin-top: 3rem;
 }
-.footer .container {
-    margin: 0.5rem auto;
-}
-.footer-photo {
-    width: 300px;
-  object-fit: cover;
-  display: block;
-}
-.sns-icon{
-    margin-left: 5rem;
+.sns-icon a{
+  margin: 1rem auto;
 }
 .grid{
     display: grid;
     grid-template-columns: repeat(2,1fr);
+}
+
+/* submitボタンだけに適用する専用クラスを作る(contact.html) */
+.submit-button-fix {
+    position: relative;
+    left: -20.5px; /* ここを見た目に合わせて微調整 */
 }
 .works-card {
   display: flex;
@@ -348,6 +356,7 @@ html {
 
 .works-bottom {
   margin-top: auto; /* 下に押し込む */
+  text-align: center;
 }
 .works-img {
   width: 100%;
@@ -410,4 +419,5 @@ html {
 .works-bottom a {
   padding: 4px 24px;
 }
+
 }
