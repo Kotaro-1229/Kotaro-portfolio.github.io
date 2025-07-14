@@ -14,7 +14,7 @@ if (!sessionStorage.getItem('loaded')) {
   });
 } else {
   loading.style.display = 'none';
-}
+};
 
 /*About画面にアニメーション導入
 ================================*/
@@ -64,6 +64,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
-/*ワークスカードに0.3秒のアニメーション追加
-===========================================*/
